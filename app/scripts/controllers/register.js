@@ -17,7 +17,7 @@ angular.module('ngLoginJwtApp').controller(
 
             $http.post(url, user).success(
                 function(res) {
-                    alert('warning', 'Oops!', 'Could not register!');
+                    alert('warning', 'OK!', 'Thanks for registering!');
                 }
             ).error(
                 function(err) {
