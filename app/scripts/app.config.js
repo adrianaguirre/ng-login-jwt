@@ -2,15 +2,14 @@
 angular.module('ngLoginJwtApp').config(function ($urlRouterProvider, $stateProvider) {
 
     $urlRouterProvider.otherwise('/');
-    $stateProvider
-        .state('main', {
+    $stateProvider.state('main', {
             url        : '/',
             templateUrl: '/views/main.html'
 
-        })
-        .state('register', {
+        }).state('register', {
             url        : '/register',
-            templateUrl: '/views/register.html'
+            templateUrl: '/views/register.html',
+            controller : 'RegisterController'
 
         });
 });
