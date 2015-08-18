@@ -6,7 +6,19 @@
 }
 
 body {
-  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  max-width: 1680px;
+  overflow-x: hidden;
+  position: relative;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #000;
+  background: #ffffff;
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -59,6 +71,9 @@ body {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
   .container {
     max-width: 730px;
   }
@@ -140,4 +155,12 @@ body {
 .form-signin-heading {
   color: #292929;
   text-align: center;
+}
+.main-alert{
+  max-width:400px;
+  margin:0px auto;
+
+}
+.alert-hidden{
+  visibility: hidden;
 }

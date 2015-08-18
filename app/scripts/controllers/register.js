@@ -8,22 +8,22 @@
  * Controller of the ngLoginJwtApp
  */
 
-angular.module ('ngLoginJwtApp').controller (
-    'RegisterController', function ($scope, $http) {
-        $scope.submit = function () {
+angular.module('ngLoginJwtApp').controller(
+    'RegisterController', function($scope, $rootScope, $http, alert) {
+        $scope.submit = function() {
 
-            var url = "/";
+            var url = '/';
             var user = {};
 
-            $http.post (url, user).success (
-                function (res) {
-                    console.log ('res');
+            $http.post(url, user).success(
+                function(res) {
+                    alert('warning', 'Oops!', 'Could not register!');
                 }
-            ).error (
-                function (err) {
-                    console.log ('err');
+            ).error(
+                function(err) {
+                    alert('warning', 'Oops!', 'Could not register!');
                 }
-            )
-        }
+            );
+        };
     }
 );

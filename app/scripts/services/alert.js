@@ -7,26 +7,25 @@
  * # alert
  * Service in the ngLoginJwtApp.
  */
-angular.module ('ngLoginJwtApp').service (
-    'alert', function ($rootScope, $timeout) {
-        // AngularJS will instantiate a singleton by calling "new" on this function
+angular.module('ngLoginJwtApp').service(
+    'alert', function alert($rootScope, $timeout) {
 
         var alertTimeout;
 
-        return function (type, title, message, timeoout) {
+        return function(type, title, message, timeout) {
 
             $rootScope.alert = {
-                hasBeenShow : true,
-                show        : true,
-                type        : type,
-                message     : message,
-                title       : title
+                hasBeenShown : true,
+                show         : true,
+                type         : type,
+                message      : message,
+                title        : title
             };
 
-            $timeout.cancel (alertTimeout);
+            $timeout.cancel(alertTimeout);
 
-            alertTimeout = $timeout (
-                function () {
+            alertTimeout = $timeout(
+                function() {
                     $rootScope.alert.show = false;
                 }, timeout || 2000
             );
