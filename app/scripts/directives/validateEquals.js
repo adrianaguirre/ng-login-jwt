@@ -16,17 +16,14 @@ angular.module('ngLoginJwtApp').directive('validateEquals', function () {
 
             // A function to make comparison.
             // Set elements class to isValid or valid depending on if it matches or not
-
             function validateEqual(value) {
-
                 // Check elements value against the supplied value.
                 // The confirmed password against the initial password.
-
                 // TODO: spike $eval
                 // TODO: spike $setValidity
+
                 var valid = (value === scope.$eval(attrs.validateEquals));
                 ngModelController.$setValidity('equal', valid);
-
                 return valid ? value : undefined;
 
             }
